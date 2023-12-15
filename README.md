@@ -26,6 +26,18 @@ La URI para ver la página es `http://localhost:5173` por defecto.
 
 ![Get services](public/Pantalla_principal.png)
 
+# Docker
+
+## Crear imagen
+```bash
+docker build -t test-frontend .
+```
+## Ejecutar imagen
+```bash
+docker run --rm -dit --name prueba-frontend -p 8080:80 test-frontend
+```
+
+
  [1]:https://gitlab.com/felimarod
  [2]:https://github.com/felimarod/prueba-desarrollador-backend.git
  [3]:https://reactjs.org
