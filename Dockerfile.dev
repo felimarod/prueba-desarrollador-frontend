@@ -12,8 +12,5 @@ RUN echo "VITE_BACKEND_URL=http://backend:8000/api/tutorial" > .env
 
 EXPOSE 5173/tcp
 
-RUN ["npm", "run", "build"]
-
-FROM httpd:alpine AS final
-
-COPY --from=deploy --chown=www-html:www-html /app/dist/ /usr/local/apache2/htdocs
+ENTRYPOINT [ "npm" ]
+CMD ["run", "dev"]
